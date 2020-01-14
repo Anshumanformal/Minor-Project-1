@@ -235,7 +235,7 @@ double mst(const point2d *cities, int n, edge *tree_edges)
   qsort(edges, m, sizeof(edge), cmp_edge_w);
 
   // construct the mst using Prim's Algorithm
-  comps = malloc(sizeof(int)*n);
+  comps = malloc(sizeof(int)*n);	
   for (i = 0; i < n; i++)
     comps[i] = i;
 
@@ -481,7 +481,7 @@ void takeInput()
 {
 	int i,j;
 
-	printf("Enter the number of villages: ");
+	printf("Enter the number of Localities: ");
 	scanf("%d",&n);
 
 	printf("\nEnter the Cost Matrix\n");
@@ -616,7 +616,7 @@ int main(int argc, char *argv[])
   stop = clock();
   printf("\ndone (%lf seconds)\n", (((double)stop)-start)/CLOCKS_PER_SEC);
   printf("\nOptimal tour length is %lf\n", topt);
-
+  
   return 0;
 }
 else{
